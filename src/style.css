@@ -4,4 +4,5 @@
 
 body {
     background-color: #f2f1f2;
+    min-height: 100vh;
 }

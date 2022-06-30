@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
+
 export default function App() {
   return (
     <>
-      <div>
-        <h1>Nav Here</h1>
-      </div>
-      <Outlet />
+      <Navbar />
+      <main className="mt-16">
+        <Outlet />
+      </main>
     </>
   );
 }
