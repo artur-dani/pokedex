@@ -1,5 +1,12 @@
+import SearchForm from "../components/SearchForm";
+
 const Pokemons = () => {
-  return <div>Pokemons</div>;
+  return (
+    <>
+      <SearchForm />
+      <div>Pokemons</div>
+    </>
+  );
 };
 
 export default Pokemons;
