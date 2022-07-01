@@ -24,9 +24,9 @@ const PokemonDetail = () => {
       >
         <span className="font-semibold text-primary">Go Back</span>
       </Link>
-      <div className="flex flex-col items-start justify-center w-full mx-auto my-4 rounded-lg shadow-lg lg:flex-row bg-lime-400">
+      <div className="flex flex-col justify-center w-full mx-auto my-4 rounded-lg shadow-lg lg:flex-row bg-lime-400">
         <PokemonDetailHeader pokemon={pokemon} />
-        <div className="w-full px-6 pt-16 overflow-hidden bg-white rounded-b-lg lg:mt-0 rounded-t-3xl lg:rounded-t-none lg:rounded-b-none lg:rounded-r-lg lg:pt-8 md:px-12 lg:px-24">
+        <div className="w-full px-6 pt-16 overflow-hidden bg-white rounded-b-lg lg:mt-0 rounded-t-3xl lg:rounded-t-none lg:rounded-b-none lg:rounded-r-lg lg:pt-8 md:px-12">
           <div className="flex flex-row justify-between w-full">
             <PokemonDetailBody pokemon={pokemon} />
           </div>
