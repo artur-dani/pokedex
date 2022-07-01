@@ -6,3 +6,7 @@ export const leftPad = (numberString, targetLength) => {
   }
   return output;
 };
+
+export const classes = (...classNames) => {
+  return classNames.filter((className) => className).join(" ");
+};

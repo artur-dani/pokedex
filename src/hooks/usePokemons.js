@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import axios from "../api/axios";
 import { baseImageUrl } from "../api/baseUrls";
@@ -24,13 +24,12 @@ const usePokemons = () => {
       );
 
       const fetchedPokemons = response.data?.results?.map((pokemon) => {
-        const [_, id] = pokemon.url.match(/\/(\d{1,3})\/$/);
+        const [_, idStr] = pokemon.url.match(/\/(\d{1,3})\/$/);
+        const id = Number(idStr);
+        const number = leftPad(idStr, 3);
+        const imgUrl = `${baseImageUrl}/${number}.png`;
 
-        return {
-          ...pokemon,
-          id: leftPad(id, 3),
-          imgUrl: `${baseImageUrl}/${leftPad(id, 3)}.png`,
-        };
+        return { ...pokemon, id, number, imgUrl };
       });
 
       setCount(response.data?.count);
