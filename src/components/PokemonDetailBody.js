@@ -2,6 +2,8 @@ import { Tab } from "@headlessui/react";
 import { Fragment } from "react";
 import { classes } from "../utils";
 import PokemonDetailBiography from "./PokemonDetailBiography";
+import PokemonDetailEvolution from "./PokemonDetailEvolution";
+import PokemonDetailStats from "./PokemonDetailStats";
 
 function PokemonDetailBody({ pokemon }) {
   return (
@@ -48,8 +50,12 @@ function PokemonDetailBody({ pokemon }) {
         <Tab.Panel className={"pb-6"}>
           <PokemonDetailBiography pokemon={pokemon} />
         </Tab.Panel>
-        <Tab.Panel className={"pb-6"}>Content 2</Tab.Panel>
-        <Tab.Panel className={"pb-6"}>Content 3</Tab.Panel>
+        <Tab.Panel className={"pb-6"}>
+          <PokemonDetailStats pokemon={pokemon} />
+        </Tab.Panel>
+        <Tab.Panel className={"pb-6"}>
+          <PokemonDetailEvolution pokemon={pokemon} />
+        </Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
   );

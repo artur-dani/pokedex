@@ -7,8 +7,6 @@ const PokemonDetail = () => {
   const { id } = useParams();
   const { pokemon, loading, error } = usePokemon(id);
 
-  console.log(pokemon);
-
   if (loading) {
     return <div>Loading...</div>;
   }

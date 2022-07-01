@@ -5,11 +5,11 @@ const PokemonDetailBiography = ({ pokemon }) => {
       <ul className="mt-5">
         <li className="grid grid-cols-2 mb-3 gap-x-1">
           <span className="font-medium capitalize text-slate-600">hight</span>
-          <span className="text-slate-500">{pokemon.height / 10}m</span>
+          <span className="text-slate-500">{pokemon.height / 10} m</span>
         </li>
         <li className="grid grid-cols-2 mb-3 gap-x-1">
           <span className="font-medium capitalize text-slate-700">weight</span>
-          <span className="text-slate-500">{pokemon.weight / 10}m</span>
+          <span className="text-slate-500">{pokemon.weight / 10} kg</span>
         </li>
         <li className="grid grid-cols-2 mb-3 gap-x-1">
           <span className="font-medium capitalize text-slate-600">

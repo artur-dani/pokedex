@@ -4,7 +4,6 @@ import usePokemons from "../hooks/usePokemons";
 
 const Pokemons = () => {
   const { pokemons, loading, count, loadMore } = usePokemons();
-  console.log(pokemons);
 
   return (
     <>
