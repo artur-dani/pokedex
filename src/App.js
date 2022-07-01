@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <main className="container px-4 mx-auto mt-16">
+      <main className="container max-w-4xl px-4 mx-auto mt-16">
         <Outlet />
       </main>
     </>

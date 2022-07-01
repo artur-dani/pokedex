@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 import axios from "../api/axios";
+import { baseImageUrl } from "../api/baseUrls";
 import { leftPad } from "../utils";
 
 const DEFAULT_LIMIT = 20;
@@ -28,6 +29,7 @@ const usePokemons = () => {
         return {
           ...pokemon,
           id: leftPad(id, 3),
+          imgUrl: `${baseImageUrl}/${leftPad(id, 3)}.png`,
         };
       });
 

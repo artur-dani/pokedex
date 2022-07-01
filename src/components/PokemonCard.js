@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
-import { baseImageUrl } from "../api/baseUrls";
+
 const PokemonCard = ({ pokemon }) => {
   return (
     <div className="w-full mx-auto overflow-hidden transition-all duration-200 ease-in-out transform rounded-lg shadow-lg cursor-pointer hover:shadow-2xl hover:-translate-y-2">
       <Link to={`/pokemon/${pokemon.id}`}>
         <div className="flex items-center justify-center w-full py-8 mx-auto bg-lime-200">
           <div className="w-64">
-            <img
-              src={`${baseImageUrl}/${pokemon.id}.png`}
-              className="w-full h-full"
-            />
+            <img src={pokemon.imgUrl} className="w-full h-full" />
           </div>
         </div>
 
